@@ -55,7 +55,7 @@ input{
 button{
     background-color: rgb(160, 255, 160);
     color: #fff;
-    opacity: .8;
+    opacity: .9;
     transition: .4s;
     scale: 0.9;
     font-size: 1em;
