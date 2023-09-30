@@ -20,13 +20,97 @@ function convertValues(){
 
     let result 
     switch (fromValue) {
+        case 'km':
+            switch (toValue) {
+                case 'km':
+                    result = inputValue
+                    break
+                case 'hm':
+                    result = inputValue * 10
+                    break;
+                case 'dam':
+                    result = inputValue * 100
+                    break;
+                case 'm':
+                    result = inputValue * 1000
+                    break;
+                case 'dm':
+                    result = inputValue * 10000
+                    break;
+                case 'cm':
+                    result = inputValue * 100000
+                    break;
+                case 'mm':
+                    result = inputValue * 1000000
+                    break;
+            }
+        break;
+        case 'hm':
+            switch (toValue) {
+                case 'km':
+                    result = inputValue / 10
+                    break;
+                case 'hm':
+                    result = inputValue 
+                    break;
+                case 'dam':
+                    result = inputValue * 10
+                    break;
+                case 'm':
+                    result = inputValue * 100
+                    break;
+                case 'dm':
+                    result = inputValue * 1000
+                    break;
+                case 'cm':
+                    result = inputValue * 10000
+                    break
+                case 'mm':
+                    result = inputValue * 100000
+                    break
+            }
+        break;
+        case 'dam':
+            switch (toValue) {
+                case 'km':
+                    result = inputValue / 100
+                    break;
+                case 'hm':
+                    result = inputValue / 10 
+                    break;
+                case 'dam':
+                    result = inputValue 
+                    break;
+                case 'm':
+                    result = inputValue * 10
+                    break;
+                case 'dm':
+                    result = inputValue * 100
+                    break;
+                case 'cm':
+                    result = inputValue * 1000
+                    break;
+                case 'mm':
+                    result = inputValue * 10000
+                    break;
+            }
+        break;
         case 'm':
             switch (toValue) {
+                case 'km':
+                    result = inputValue / 1000
+                    break;
+                case 'hm':
+                    result = inputValue / 100
+                    break;
+                case 'dam':
+                    result = inputValue / 10
+                    break;
                 case 'm':
                     result = inputValue
                     break;
-                case 'km':
-                    result = inputValue / 1000
+                case 'dm':
+                    result = inputValue * 10
                     break;
                 case 'cm':
                     result = inputValue * 100
@@ -36,33 +120,51 @@ function convertValues(){
                     break;
             }
         break;
-        case 'km':
+        case 'dm':
             switch (toValue) {
-                case 'm':
-                    result = inputValue * 1000
-                    break;
                 case 'km':
+                    result = inputValue / 10000
+                    break;
+                case 'hm':
+                    result = inputValue / 1000
+                    break;
+                case 'dam':
+                    result = inputValue / 100
+                    break;
+                case 'm':
+                    result = inputValue / 10
+                    break;
+                case 'dm':
                     result = inputValue
-                    break
+                    break;
                 case 'cm':
-                    result = inputValue * 100000
-                    break
+                    result = inputValue * 10
+                    break;
                 case 'mm':
-                    result = inputValue * 1000000
-                    break
+                    result = inputValue * 100
+                    break;
             }
         break;
         case 'cm':
             switch (toValue) {
-                case 'm':
-                    result = inputValue / 100
-                    break;
                 case 'km':
                     result = inputValue / 100000
                     break;
+                case 'hm':
+                    result = inputValue / 10000
+                    break;
+                case 'dam':
+                    result = inputValue / 1000
+                    break;
+                case 'm':
+                    result = inputValue / 100
+                    break;
+                case 'dm':
+                    result = inputValue / 10
+                    break;
                 case 'cm':
                     result = inputValue
-                    break
+                    break;
                 case 'mm':
                     result = inputValue * 10
                     break;
@@ -70,24 +172,33 @@ function convertValues(){
         break;
         case 'mm':
             switch (toValue) {
+                case 'km':
+                    result = inputValue / 1000000
+                    break;
+                case 'hm':
+                    result = inputValue / 100000
+                    break;
+                case 'dam':
+                    result = inputValue / 10000
+                    break;
                 case 'm':
                     result = inputValue / 1000
                     break;
-                case 'km':
-                    result = inputValue / 1000000
-                    break
+                case 'dm':
+                    result = inputValue / 100
+                    break;
                 case 'cm':
                     result = inputValue / 10
-                    break
+                    break;
                 case 'mm':
                     result = inputValue
-                    break
+                    break;
             }
         break;
     }
     // Exibir resultado no input
     messageElement.textContent = '';
-    outputElement.value = result.toFixed(1)
+    outputElement.value = result
 
     // Exibir resultado na mensagem
     const fromLabel = fromElement.options[fromElement.selectedIndex].text
