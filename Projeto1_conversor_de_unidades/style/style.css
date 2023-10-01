@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #8ad4ff;
+    background-color: #9fdcff;
 }
 
 main{
@@ -24,11 +24,15 @@ p{
     font-weight: 600;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 /* CONVERSOR 1 */
 .container1{
     background-color: rgb(248, 176, 255);
     border-radius: 10px;
-    box-shadow: 1px 2px 5px rgba(88, 88, 88, 0.703);
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.703);
 
     padding: 2%;
     width: 450px;
@@ -64,12 +68,12 @@ input{
 }
 
 button{
-    background-color: rgb(160, 255, 160);
+    background-color: rgb(110, 211, 110);
     color: #fff;
-    opacity: .9;
     transition: .4s;
     scale: 0.9;
     font-size: 1em;
+    font-weight: 600;
 
     padding: 10px 12px;
 
@@ -80,7 +84,7 @@ button{
 }
 
 button:hover{
-    opacity: 1;
+    background-color: rgb(128, 248, 128);
     scale: 1;
 }
 
@@ -95,7 +99,7 @@ button:hover{
 .container2{
     background-color: rgb(205, 168, 255);
     border-radius: 10px;
-    box-shadow: 1px 2px 5px rgba(88, 88, 88, 0.703);
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.703);
 
     padding: 2%;
     width: 450px;
@@ -131,12 +135,12 @@ input{
 }
 
 .button2{
-    background-color: rgb(160, 255, 160);
+    background-color: rgb(110, 211, 110);
     color: #fff;
-    opacity: .9;
     transition: .4s;
     scale: 0.9;
     font-size: 1em;
+    font-weight: 600;
 
     padding: 10px 12px;
 
@@ -147,7 +151,7 @@ input{
 }
 
 .button2:hover{
-    opacity: 1;
+    background-color: rgb(128, 248, 128);
     scale: 1;
 }
 

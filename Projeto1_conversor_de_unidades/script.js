@@ -23,7 +23,7 @@ function convertValuesComp(){
         messageElement.textContent = 'As unidades escolhidas são iguais.'
         return
     }
-
+    
     let result 
     switch (fromValue) {
         case 'km':
